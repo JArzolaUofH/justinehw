@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head'); %>
+    <style> 
+        .btn-lg {
+          font-size: 24px;
+          padding: 10px;
+        }
+      </style>
+  </head>
+  <body class="container">
+    <main>
+      <div class="jumbotron">
+        <h1>Calculate Cart Averages</h1>
+        <h2> This is a website to calculate cart averages !</h2>
+        <form>
+          <button class=" btn-lg">Load</button>
+        </form>
+        <br />
+        <% each_person.forEach(function(person) { %>
+        <h3>id <%= person.id %></h3>
+        <p>total: <%= person.total %></p>
+        <p>totalproducts: <%= person.totalproducts %></p>
+        <br />
+        <% }); %>
+      </div>
+    </main>
+    <footer><%- include('../partials/footer'); %></footer>
+  </body>
+</html>
+
+
